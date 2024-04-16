@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="pnMain" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
+<AnchorPane fx:id="pnMain" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
    <children>
       <GridPane fx:id="pnLogin" alignment="CENTER" hgap="22.0" vgap="10.0">
           <padding>
@@ -15,6 +15,7 @@
             <ColumnConstraints halignment="CENTER" />
             <ColumnConstraints />
             <ColumnConstraints halignment="CENTER" />
+            <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints valignment="CENTER" />
@@ -26,12 +27,16 @@
             <RowConstraints />
          </rowConstraints>
          <children>
-            <Label text="Label" GridPane.rowIndex="1" />
-            <TextField minWidth="125.0" prefHeight="28.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.rowIndex="3" />
-            <TextField accessibleRole="PASSWORD_FIELD" prefHeight="25.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="Sign In" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label text="UserName" GridPane.rowIndex="1" />
+            <TextField fx:id="tfUsName" minWidth="74.0" prefHeight="28.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label text="PassWord" GridPane.rowIndex="3" />
+            <TextField fx:id="tfPass" accessibleRole="PASSWORD_FIELD" prefHeight="25.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <Button fx:id="btnSingInUser" mnemonicParsing="false" onAction="#onSigninClick" text="Sign In" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: RED;" text="WELCOME TO CITTTTT" textAlignment="CENTER" GridPane.columnSpan="3" />
+            <Button fx:id="btnDeteUser" layoutX="140.0" layoutY="159.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="DeleteMe" GridPane.rowIndex="6" />
+            <Button fx:id="btnRegisterUser" layoutX="142.0" layoutY="160.0" mnemonicParsing="false" onAction="#CreateUser" text="Register" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextField fx:id="tfEmo" layoutX="120.0" layoutY="57.0" minWidth="74.0" prefHeight="28.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="btnRegisterUser1" disable="true" layoutX="237.0" layoutY="160.0" mnemonicParsing="false" onAction="#SetEmo" text="SetEmo" GridPane.columnIndex="3" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>
