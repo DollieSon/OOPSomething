@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pnMain" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
+<AnchorPane fx:id="pnMain" prefHeight="412.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
    <children>
-      <GridPane fx:id="pnLogin" alignment="CENTER" hgap="22.0" vgap="10.0">
+      <GridPane fx:id="pnLogin" alignment="CENTER" hgap="22.0" prefHeight="412.0" prefWidth="575.0" vgap="10.0">
           <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
@@ -15,6 +20,7 @@
             <ColumnConstraints halignment="CENTER" />
             <ColumnConstraints />
             <ColumnConstraints halignment="CENTER" />
+            <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
@@ -37,6 +43,9 @@
             <Button fx:id="btnRegisterUser" layoutX="142.0" layoutY="160.0" mnemonicParsing="false" onAction="#CreateUser" text="Register" GridPane.columnIndex="3" GridPane.rowIndex="6" />
             <TextField fx:id="tfEmo" layoutX="120.0" layoutY="57.0" minWidth="74.0" prefHeight="28.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <Button fx:id="btnRegisterUser1" disable="true" layoutX="237.0" layoutY="160.0" mnemonicParsing="false" onAction="#SetEmo" text="SetEmo" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="btnAddMoney" disable="true" mnemonicParsing="false" onAction="#AddMoney" text="+10" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="btnRemoveMoney" disable="true" mnemonicParsing="false" onAction="#RemoveMoney" text="-10" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label fx:id="lblMoney" GridPane.columnIndex="4" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
